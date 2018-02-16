@@ -1,5 +1,6 @@
 require 'rspec'
 require '00_tree_node'
+require 'byebug'
 
 describe PolyTreeNode do
   let(:node1) { PolyTreeNode.new('root') }
@@ -48,7 +49,7 @@ describe PolyTreeNode do
     end
 
     context "when reassigning" do
-      before { node3.parent = node2 }
+      before {node3.parent = node2 }
 
       it "should set the node's parent to the new parent" do
         expect(node3.parent).to equal(node2)
